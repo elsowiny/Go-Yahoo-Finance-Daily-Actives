@@ -23,7 +23,6 @@ func main() {
 		//FiftyTwoWeekRange string
 	}
 	headers := []string{}
-	stockData := []stockInfo{}
 	//slice of slice of strings
 	allStocksSlice := [][]string{}
 
@@ -63,7 +62,6 @@ func main() {
 	c.OnHTML("tbody", func(e *colly.HTMLElement) {
 		//	log.Println("Found <tbody> element")
 		e.ForEach("tr", func(_ int, el *colly.HTMLElement) {
-			stock := stockInfo{}
 			dataSlice := []string{}
 			el.ForEach("td", func(_ int, el *colly.HTMLElement) {
 				//fmt.Println(el.Text)
@@ -73,12 +71,6 @@ func main() {
 
 			//add to overall slice
 			allStocksSlice = append(allStocksSlice, dataSlice)
-
-			//	log.Println("dataSlice: ", dataSlice)
-			//len
-			//	log.Println("len(dataSlice): ", len(dataSlice))
-
-			stockData = append(stockData, stock)
 		})
 	})
 
@@ -87,22 +79,14 @@ func main() {
 	c.Wait()
 
 	fmt.Println(headers)
-	//fmt.Println(stockData)
-	//parse the stockData into a map
-
-	//loop headers
-
-	for i := 0; i < len(headers); i++ {
-		fmt.Println(headers[i], ":", stockData[i])
-	}
-
-	//print len(headers)
-	fmt.Println(len(headers))
-
 	//loop allStocksSlice
 	for i := 0; i < len(allStocksSlice); i++ {
-		log.Println("Stock")
-		fmt.Println(allStocksSlice[i])
+		//fmt.Println("Stock: ", allStocksSlice[i])
+		for j := 0; j < len(allStocksSlice[i]); j++ {
+			//map headers to values
+			fmt.Println(headers[j], ": ", allStocksSlice[i][j])
+
+		}
 	}
 
 }

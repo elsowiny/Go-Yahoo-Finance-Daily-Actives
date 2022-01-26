@@ -10,8 +10,22 @@ import (
 
 func main() {
 
+	type stockInfo struct {
+		Symbol        string
+		Name          string
+		Price         string
+		Change        string
+		ChangePercent string
+		Volume        string
+		AvgVolume     string
+		MarketCap     string
+		PE            string
+		//FiftyTwoWeekRange string
+	}
 	headers := []string{}
-	stockData := []string{}
+	stockData := []stockInfo{}
+	//slice of slice of strings
+	allStocksSlice := [][]string{}
 
 	c := colly.NewCollector(
 		colly.UserAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36"),
@@ -47,13 +61,24 @@ func main() {
 	})
 
 	c.OnHTML("tbody", func(e *colly.HTMLElement) {
-		log.Println("Found <tbody> element")
+		//	log.Println("Found <tbody> element")
 		e.ForEach("tr", func(_ int, el *colly.HTMLElement) {
-			//fmt.Println(el.Text, "test tr")
+			stock := stockInfo{}
+			dataSlice := []string{}
 			el.ForEach("td", func(_ int, el *colly.HTMLElement) {
-				//log.Println(el.Text)
-				stockData = append(stockData, el.Text)
+				//fmt.Println(el.Text)
+				//if its empty dont add to slice
+				dataSlice = append(dataSlice, el.Text)
 			})
+
+			//add to overall slice
+			allStocksSlice = append(allStocksSlice, dataSlice)
+
+			//	log.Println("dataSlice: ", dataSlice)
+			//len
+			//	log.Println("len(dataSlice): ", len(dataSlice))
+
+			stockData = append(stockData, stock)
 		})
 	})
 
@@ -69,6 +94,15 @@ func main() {
 
 	for i := 0; i < len(headers); i++ {
 		fmt.Println(headers[i], ":", stockData[i])
+	}
+
+	//print len(headers)
+	fmt.Println(len(headers))
+
+	//loop allStocksSlice
+	for i := 0; i < len(allStocksSlice); i++ {
+		log.Println("Stock")
+		fmt.Println(allStocksSlice[i])
 	}
 
 }

@@ -1,0 +1,26 @@
+Symbol,Name,Price (Intraday),Change,% Change,Volume,Avg Vol (3 month),Market Cap,PE Ratio (TTM)
+T,AT&T Inc.,24.25,-2.23,-8.42%,134.825M,56.295M,173.169B,187.98
+F,Ford Motor Company,19.91,-0.07,-0.35%,135.098M,113.672M,79.565B,27.92
+AAPL,Apple Inc.,159.69,-0.09,-0.06%,108.275M,97.423M,2.608T,28.47
+AMD,"Advanced Micro Devices, Inc.",110.71,-0.42,-0.38%,94.315M,63.477M,133.694B,34.15
+MSFT,Microsoft Corporation,296.71,+8.22,+2.85%,90.214M,31.202M,2.224T,31.60
+DKNG,DraftKings Inc.,20.33,+1.01,+5.23%,89.957M,18.45M,8.265B,N/A
+SOFI,"SoFi Technologies, Inc.",12.58,-0.18,-1.41%,82.773M,42.685M,10.059B,N/A
+AMC,"AMC Entertainment Holdings, Inc.",15.94,-0.08,-0.50%,76.429M,44.666M,8.182B,N/A
+ITUB,Itaú Unibanco Holding S.A.,4.4500,+0.0600,+1.37%,76.116M,42.381M,43.521B,8.23
+NVDA,NVIDIA Corporation,227.72,+4.48,+2.01%,74.884M,50.225M,567.478B,70.22
+NIO,NIO Inc.,22.66,-1.13,-4.75%,71.4M,49.18M,36.042B,N/A
+PLTR,Palantir Technologies Inc.,12.75,-0.31,-2.37%,69.341M,41.61M,25.561B,N/A
+BBD,Banco Bradesco S.A.,4.0700,+0.0200,+0.49%,64.807M,38.841M,39.436B,9.23
+BAC,Bank of America Corporation,45.90,+0.47,+1.03%,61.789M,49.63M,370.772B,12.86
+PBR,Petróleo Brasileiro S.A. - Petrobras,13.61,+0.45,+3.42%,62.845M,29.156M,88.766B,3.61
+INTC,Intel Corporation,51.69,+0.69,+1.35%,50.859M,33.402M,210.223B,10.02
+LCID,"Lucid Group, Inc.",33.41,-2.05,-5.78%,50.242M,78.669M,55.005B,N/A
+GRAB,Grab Holdings Limited,5.94,+0.12,+2.06%,49.725M,14.731M,22.222B,N/A
+ABEV,Ambev S.A.,2.7500,-0.0400,-1.43%,46.452M,22.778M,43.281B,15.11
+ARVL,Arrival,3.2400,-0.3200,-8.99%,44.061M,4.787M,2.062B,N/A
+VZ,Verizon Communications Inc.,51.02,-1.88,-3.55%,40.722M,21.768M,214.17B,9.59
+CCL,Carnival Corporation & plc,20.29,+0.09,+0.45%,40.493M,40.996M,23.653B,N/A
+ZNGA,Zynga Inc.,8.66,-0.11,-1.25%,39.75M,34.928M,9.79B,N/A
+WFC,Wells Fargo & Company,54.14,+0.55,+1.03%,36.655M,27.309M,210.377B,10.94
+PFE,Pfizer Inc.,53.01,+0.47,+0.89%,38.215M,45.19M,297.538B,15.14

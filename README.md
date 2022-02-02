@@ -1,5 +1,9 @@
 # Go-Yahoo-Finance-Daily-Actives
 
+### To run
+
+` go run main.go config.go`
+
 Scrape and convert the Yahoo Finance Daily Actives into a CSV file with headers, and optionally send yourself a copy of the file!
 
 
